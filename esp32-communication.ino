@@ -4,8 +4,8 @@
 #include "common.h"
 
 #include "esp_now_trans.h"
-#include "udp_trans.h"
-#include "mqtt_trans.h"
+//#include "udp_trans.h"
+//#include "mqtt_trans.h"
 
 // WiFi network credentials
 //TP-LINK_0D2246
@@ -97,8 +97,9 @@ void loop(void)
       {
           digitalWrite(LED, LOW);  //没有接收到消息，也没有发射，关灯
           i2s_zero_dma_buffer(SPK_I2S_PORT);  //清空DMA中缓存的数据，你可以尝试一下不清空（注释这行）是什么效果
-
+#if USE_TRANS_PROTOCOL == USE_UDP
           sequenceNumber = 0;
+#endif
       }
     }
 }
