@@ -5,7 +5,7 @@
 
 #include "esp_now_trans.h"
 //#include "udp_trans.h"
-//#include "mqtt_trans.h"
+#include "mqtt_trans.h"
 
 // WiFi network credentials
 //TP-LINK_0D2246

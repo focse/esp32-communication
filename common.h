@@ -11,7 +11,7 @@
 #define USE_UDP     1
 #define USE_MQTT    2
 
-#define USE_TRANS_PROTOCOL  USE_ESP_NOW
+#define USE_TRANS_PROTOCOL  USE_MQTT
 
 #define USE_16BIT_DATA  0
 
